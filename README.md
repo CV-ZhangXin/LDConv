@@ -98,12 +98,11 @@ The code has been opened, thank you for your support.
 # You may want to cite:
 
 ```
-@misc{zhang2023rfaconv,
-      title={RFAConv: Innovating Spatial Attention and Standard Convolutional Operation}, 
-      author={Xin Zhang and Chen Liu and Degang Yang and Tingting Song and Yichen Ye and Ke Li and Yingze Song},
-      year={2023},
-      eprint={2304.03198},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{dai2017deformable,
+  title={Deformable convolutional networks},
+  author={Dai, Jifeng and Qi, Haozhi and Xiong, Yuwen and Li, Yi and Zhang, Guodong and Hu, Han and Wei, Yichen},
+  booktitle={Proceedings of the IEEE international conference on computer vision},
+  pages={764--773},
+  year={2017}
 }
 
