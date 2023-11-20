@@ -42,13 +42,13 @@ class AKConv(nn.Module):
         g_lb = (1 + (q_lb[..., :N].type_as(p) - p[..., :N])) * (1 - (q_lb[..., N:].type_as(p) - p[..., N:]))
         g_rt = (1 - (q_rt[..., :N].type_as(p) - p[..., :N])) * (1 + (q_rt[..., N:].type_as(p) - p[..., N:]))
 
-        # (b, c, h, w, N)
+        # resampling the features based on the modified coordinates.
         x_q_lt = self._get_x_q(x, q_lt, N)
         x_q_rb = self._get_x_q(x, q_rb, N)
         x_q_lb = self._get_x_q(x, q_lb, N)
         x_q_rt = self._get_x_q(x, q_rt, N)
 
-        # (b, c, h, w, N)
+        # bilinear
         x_offset = g_lt.unsqueeze(dim=1) * x_q_lt + \
                    g_rb.unsqueeze(dim=1) * x_q_rb + \
                    g_lb.unsqueeze(dim=1) * x_q_lb + \
