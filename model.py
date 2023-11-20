@@ -27,6 +27,7 @@ class AKConv(nn.Module):
         q_lt = p.detach().floor()
         q_rb = q_lt + 1
 
+        # getting the coordinates of the 4 neighboring locations.
         q_lt = torch.cat([torch.clamp(q_lt[..., :N], 0, x.size(2) - 1), torch.clamp(q_lt[..., N:], 0, x.size(3) - 1)],
                          dim=-1).long()
         q_rb = torch.cat([torch.clamp(q_rb[..., :N], 0, x.size(2) - 1), torch.clamp(q_rb[..., N:], 0, x.size(3) - 1)],
@@ -34,7 +35,7 @@ class AKConv(nn.Module):
         q_lb = torch.cat([q_lt[..., :N], q_rb[..., N:]], dim=-1)
         q_rt = torch.cat([q_rb[..., :N], q_lt[..., N:]], dim=-1)
 
-        # clip p
+        # limiting the locations to H and W.
         p = torch.cat([torch.clamp(p[..., :N], 0, x.size(2) - 1), torch.clamp(p[..., N:], 0, x.size(3) - 1)], dim=-1)
 
         # bilinear kernel (b, h, w, N)
