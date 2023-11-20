@@ -91,3 +91,17 @@ The relevant interpolation codes and resampling codes are referenced at https://
 | YOLOv5n           |d          | 37.5      | 27     | 25.5  | 12.9 |
 | YOLOv5n           |e          | 38.4      | 27.6   | 26.4  | 13.4 |
 
+
+### Citation
+# You may want to cite:
+
+```
+@misc{zhang2023rfaconv,
+      title={RFAConv: Innovating Spatial Attention and Standard Convolutional Operation}, 
+      author={Xin Zhang and Chen Liu and Degang Yang and Tingting Song and Yichen Ye and Ke Li and Yingze Song},
+      year={2023},
+      eprint={2304.03198},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+
