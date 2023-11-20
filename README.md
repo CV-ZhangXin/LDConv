@@ -3,6 +3,8 @@
 This repository is a PyTorch implementation of our paper: AKConv: Convolutional Kernel with Arbitrary Sampled Shapes and Arbitrary Number of Parameters.
 The relevant interpolation codes and resampling codes are referenced at https://github.com/dontLoveBugs/Deformable_ConvNet_pytorch.
 
+
+# Object detection based on COCO2017 and YOLOv5
 | Models    | AKConv | AP50 | AP75 | AP   | APS  | APM  | APL  | GFLOPS | Params (M) |
 |-----------|--------|------|------|------|------|------|------|--------|------------|
 | YOLOv5n   | -      | 45.6 | 28.9 | 27.5 | 13.5 | 31.5 | 35.9 | 4.5    | 1.87       |
@@ -14,6 +16,9 @@ The relevant interpolation codes and resampling codes are referenced at https://
 |           | 4      | 58.2 | 41.9 | 39.2 | 21.4 | 43.2 | 53.4 | 14.1   | 6.01       |
 |           | 6      | 59.2 | 42.6 | 39.9 | 21.5 | 44.2 | 54.7 | 15.3   | 6.55       |
 |           | 7      | 59.4 | 43.2 | 40.4 | 21.5 | 44.6 | 55.1 | 15.9   | 6.82       |
+
+
+# Object detection based on VisDrone-DET2021 and YOLOv5
 
 | Models  | AKConv | Precision | Recall | mAP50 | mAP  | FLOPS | Params (M) |
 |---------|--------|-----------|--------|-------|------|-------|------------|
@@ -27,6 +32,7 @@ The relevant interpolation codes and resampling codes are referenced at https://
 |         | 14     | 40        | 28.8   | 27.9  | 14.3 | 5.3   | 2.2        |
 
 
+# Comparison experiments
 | Models                        | AP50 | AP75 | AP   | APS  | APM  | APL  | GFLOPS | Params (M) |
 |-------------------------------|------|------|------|------|------|------|--------|------------|
 | YOLOv5s                       | 54.8 | 37.5 | 35   | 19.2 | 40   | 45.2 | 16.4   | 7.23       |
@@ -38,7 +44,7 @@ The relevant interpolation codes and resampling codes are referenced at https://
 | YOLOv5s (AKConv=11)           | 58.5 | 42.1 | 39.3 | 21.9 | 43.3 | 53.8 | 18.3   | 7.91       |
 | YOLOv5s (AKConv=11, padding)  | 58.6 | 42.1 | 39.5 | 21.3 | 43.7 | 53.2 | 18.3   | 7.91       |
 
-
+# Comparison experiments
 | Models             | Precision | Recall | mAP50 | mAP  | GFLOPS | Params (M) |
 |--------------------|-----------|--------|-------|------|--------|------------|
 | YOLOv5n            | 73.8      | 62.2   | 68.1  | 41.5 | 4.2    | 1.77       |
