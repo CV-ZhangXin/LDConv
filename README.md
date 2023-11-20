@@ -74,11 +74,11 @@ The relevant interpolation codes and resampling codes are referenced at https://
 | YOLOv8n-6=get-pn1 | 50.2 | 38.2 | 35.4 | 16.6 | 38.3 | 51.3 | 8.6    | 3.01       |
 
 
-| Models            | Precision | Recall | mAP50 | mAP  |
-|-------------------|-----------|--------|-------|------|
-| YOLOv5n-5=get_pn1 | 39.5      | 27.9   | 26.9  | 13.7 |
-| YOLOv5n-5=get_pn2 | 39.4      | 28.2   | 26.8  | 13.6 |
-| YOLOv5n-5=get_pn3 | 37.4      | 27.8   | 26.1  | 13.4 |
-| YOLOv5n-5=get_pn4 | 37.5      | 27     | 25.5  | 12.9 |
-| YOLOv5n-5=get_pn5 | 38.4      | 27.6   | 26.4  | 13.4 |
+| Models            |Initial Shape| Precision | Recall | mAP50 | mAP  |
+|-------------------|-----------|-----------|--------|-------|------|
+| YOLOv5n           |a          | 39.5      | 27.9   | 26.9  | 13.7 |
+| YOLOv5n           |b          | 39.4      | 28.2   | 26.8  | 13.6 |
+| YOLOv5n           |c          | 37.4      | 27.8   | 26.1  | 13.4 |
+| YOLOv5n           |d          | 37.5      | 27     | 25.5  | 12.9 |
+| YOLOv5n           |e          | 38.4      | 27.6   | 26.4  | 13.4 |
 
