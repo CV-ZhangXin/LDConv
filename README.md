@@ -20,6 +20,17 @@ The relevant interpolation codes and resampling codes are referenced at https://
 |           | 7      | 59.4 | 43.2 | 40.4 | 21.5 | 44.6 | 55.1 | 15.9   | 6.82       |
 
 
+# Object detection based on VOC 7+12 and YOLOv7
+
+| Models      | AKConv | Precision | Recall | mAP50 | mAP  | FLOPS | Params |
+|-------------|--------|-----------|--------|-------|------|-------|--------|
+|             | -      | 77.3      | 69.8   | 76.4  | 50.2 | 13.2  | 6.06   |
+|             | 3      | 80.1      | 68.4   | 76.1  | 50.3 | 12.1  | 5.56   |
+|             | 4      | 78.2      | 70.3   | 76.2  | 50.7 | 12.4  | 5.66   |
+| YOLOv7-tiny | 5      | 77        | 71.1   | 76.5  | 50.8 | 12.6  | 5.75   |
+|             | 6      | 79.6      | 69.9   | 76.9  | 51   | 12.9  | 5.85   |
+|             | 8      | 78.6      | 70.1   | 76.7  | 51.2 | 13.4  | 6.04   |
+|             | 9      | 81        | 69.3   | 76.7  | 51.3 | 13.7  | 6.14   |
 # Object detection based on VisDrone-DET2021 and YOLOv5
 
 | Models  | AKConv | Precision | Recall | mAP50 | mAP  | FLOPS | Params (M) |
@@ -55,16 +66,9 @@ The relevant interpolation codes and resampling codes are referenced at https://
 | YOLOv5n (DSConv=9) | 60.6      | 50.8   | 53.4  | 25.3 | 4.8    | 1.9        |
 | YOLOv5n (AKConv=9) | 76.7      | 65.2   | 71.8  | 48.4 | 4.8    | 1.9        |
 
-| Models      | AKConv | Precision | Recall | mAP50 | mAP  | FLOPS | Params |
-|-------------|--------|-----------|--------|-------|------|-------|--------|
-|             | -      | 77.3      | 69.8   | 76.4  | 50.2 | 13.2  | 6.06   |
-|             | 3      | 80.1      | 68.4   | 76.1  | 50.3 | 12.1  | 5.56   |
-|             | 4      | 78.2      | 70.3   | 76.2  | 50.7 | 12.4  | 5.66   |
-| YOLOv7-tiny | 5      | 77        | 71.1   | 76.5  | 50.8 | 12.6  | 5.75   |
-|             | 6      | 79.6      | 69.9   | 76.9  | 51   | 12.9  | 5.85   |
-|             | 8      | 78.6      | 70.1   | 76.7  | 51.2 | 13.4  | 6.04   |
-|             | 9      | 81        | 69.3   | 76.7  | 51.3 | 13.7  | 6.14   |
 
+
+# Exploring experiments
 | Models            | AP50 | AP75 | AP   | APS  | APM  | APL  | GFLOPS | Params (M) |
 |-------------------|------|------|------|------|------|------|--------|------------|
 | YOLOv8n                            | 49.0 | 37.1 | 34.2 | 16.9 | 37.1 | 49.1 | 8.7    | 3.15       |
