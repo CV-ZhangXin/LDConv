@@ -5,7 +5,7 @@ This repository is a PyTorch implementation of our paper: AKConv: Convolutional 
 
 The relevant interpolation codes and resampling codes are referenced at https://github.com/dontLoveBugs/Deformable_ConvNet_pytorch.
 
-
+# AKConv provides kernels of different sizes for efficient extraction of features.
 ![Kernels-samples](https://github.com/CV-ZhangXin/AKConv/assets/54203800/3a3c3c96-22a1-409c-8c73-0fcd629eacde)
 
 
