@@ -122,6 +122,6 @@ class AKConv(nn.Module):
     #  Stacking resampled features in the row direction.
     @staticmethod
     def _reshape_x_offset(x_offset, num_param):
-        b, c, h, w, N = x_offset.size()
+        b, c, h, w, n = x_offset.size()
         x_offset = rearrange(x_offset, 'b c h w n -> b c (h n) w')
         return x_offset
