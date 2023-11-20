@@ -67,11 +67,12 @@ The relevant interpolation codes and resampling codes are referenced at https://
 
 | Models            | AP50 | AP75 | AP   | APS  | APM  | APL  | GFLOPS | Params (M) |
 |-------------------|------|------|------|------|------|------|--------|------------|
-| YOLOv8n           | 49.0 | 37.1 | 34.2 | 16.9 | 37.1 | 49.1 | 8.7    | 3.15       |
-| YOLOv8n-5         | 49.5 | 37.6 | 34.9 | 16.8 | 38.2 | 50.2 | 8.4    | 2.94       |
-| YOLOv8n-5=get-pn1 | 49.6 | 37.8 | 34.9 | 15.9 | 38.4 | 50.1 | 8.4    | 2.94       |
-| YOLOv8n-6         | 50.1 | 38.3 | 35.3 | 16.6 | 38.6 | 51.1 | 8.6    | 3.01       |
-| YOLOv8n-6=get-pn1 | 50.2 | 38.2 | 35.4 | 16.6 | 38.3 | 51.3 | 8.6    | 3.01       |
+| YOLOv8n                            | 49.0 | 37.1 | 34.2 | 16.9 | 37.1 | 49.1 | 8.7    | 3.15       |
+| YOLOv8n-5 (Sampled Shape 1)        | 49.5 | 37.6 | 34.9 | 16.8 | 38.2 | 50.2 | 8.4    | 2.94       |
+| YOLOv8n-5 (Sampled Shape 2)        | 49.6 | 37.8 | 34.9 | 15.9 | 38.4 | 50.1 | 8.4    | 2.94       |
+| YOLOv8n-5 (Sampled Shape 3)        | 49.6 | 38.1 | 35 | 16.6 | 38.2 | 50.9 | 8.4    | 2.94       |
+| YOLOv8n-6 (Sampled Shape 1)        | 50.1 | 38.3 | 35.3 | 16.6 | 38.6 | 51.1 | 8.6    | 3.01       |
+| YOLOv8n-6 (Sampled Shape 2)        | 50.2 | 38.2 | 35.4 | 16.6 | 38.3 | 51.3 | 8.6    | 3.01       |
 
 
 | Models            |Initial Shape| Precision | Recall | mAP50 | mAP  |
