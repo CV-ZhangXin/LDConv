@@ -1,4 +1,4 @@
-
+# The relevant interpolation codes and resampling codes are referenced at https://github.com/dontLoveBugs/Deformable_ConvNet_pytorch.
 class AKConv(nn.Module):
     def __init__(self, inc, outc, num_param, stride=1, bias=None):
         super(AKConv, self).__init__()
