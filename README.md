@@ -1,5 +1,5 @@
 
-# AKConv: Convolutional Kernel with Arbitrary Sampled Shapes and Arbitrary Number of Parameters ([preprint](https://doi.org/10.48550/arXiv.2304.03198))
+# AKConv: Convolutional Kernel with Arbitrary Sampled Shapes and Arbitrary Number of Parameters ([preprint](https://arxiv.org/abs/2311.11587))
 This repository is a PyTorch implementation of our paper: AKConv: Convolutional Kernel with Arbitrary Sampled Shapes and Arbitrary Number of Parameters.
 # If you are interested in our other work, you can find information on https://github.com/Liuchen1997/RFAConv.
 
@@ -104,5 +104,14 @@ The code has been opened, thank you for your support.
   booktitle={Proceedings of the IEEE international conference on computer vision},
   pages={764--773},
   year={2017}
+}
+
+@misc{zhang2023akconv,
+      title={AKConv: Convolutional Kernel with Arbitrary Sampled Shapes and Arbitrary Number of Parameters}, 
+      author={Xin Zhang and Yingze Song and Tingting Song and Degang Yang and Yichen Ye and Jie Zhou and Liming Zhang},
+      year={2023},
+      eprint={2311.11587},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 
