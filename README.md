@@ -8,7 +8,8 @@ The relevant interpolation codes and resampling codes are referenced at https://
 The code has been opened, thank you for your support.
 
 # AKConv provides kernels of different sizes for efficient extraction of features.
-![Kernels-samples](https://github.com/CV-ZhangXin/AKConv/assets/54203800/3a3c3c96-22a1-409c-8c73-0fcd629eacde)
+![Kernels-samples](https://github.com/CV-ZhangXin/AKConv/assets/54203800/0fa57db7-6747-4887-8adc-62358861773b)
+
 
 
 
