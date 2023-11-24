@@ -1,10 +1,9 @@
-# The relevant interpolation codes and resampling codes are referenced at https://github.com/dontLoveBugs/Deformable_ConvNet_pytorch.
 class AKConv(nn.Module):
     def __init__(self, inc, outc, num_param, stride=1, bias=None):
         super(AKConv, self).__init__()
         self.num_param = num_param
         self.stride = stride
-        self.conv = nn.Sequential(nn.Conv2d(inc, outc, kernel_size=(num_param, 1), stride=(num_param, 1), bias=bias),nn.BatchNorm2d(outc),nn.SiLU())  # the conv adds the BN and SiLU to compare original Conv in YOLO.
+        self.conv = nn.Sequential(nn.Conv2d(inc, outc, kernel_size=(num_param, 1), stride=(num_param, 1), bias=bias),nn.BatchNorm2d(outc),nn.SiLU())  # the conv adds the BN and SiLU to compare original Conv in YOLOv5.
         self.p_conv = nn.Conv2d(inc, 2 * num_param, kernel_size=3, padding=1, stride=stride)
         nn.init.constant_(self.p_conv.weight, 0)
         self.p_conv.register_full_backward_hook(self._set_lr)
@@ -27,7 +26,6 @@ class AKConv(nn.Module):
         q_lt = p.detach().floor()
         q_rb = q_lt + 1
 
-        # getting the coordinates of the 4 neighboring locations.
         q_lt = torch.cat([torch.clamp(q_lt[..., :N], 0, x.size(2) - 1), torch.clamp(q_lt[..., N:], 0, x.size(3) - 1)],
                          dim=-1).long()
         q_rb = torch.cat([torch.clamp(q_rb[..., :N], 0, x.size(2) - 1), torch.clamp(q_rb[..., N:], 0, x.size(3) - 1)],
@@ -35,7 +33,7 @@ class AKConv(nn.Module):
         q_lb = torch.cat([q_lt[..., :N], q_rb[..., N:]], dim=-1)
         q_rt = torch.cat([q_rb[..., :N], q_lt[..., N:]], dim=-1)
 
-        # limiting the locations to H and W.
+        # clip p
         p = torch.cat([torch.clamp(p[..., :N], 0, x.size(2) - 1), torch.clamp(p[..., N:], 0, x.size(3) - 1)], dim=-1)
 
         # bilinear kernel (b, h, w, N)
@@ -126,5 +124,11 @@ class AKConv(nn.Module):
     @staticmethod
     def _reshape_x_offset(x_offset, num_param):
         b, c, h, w, n = x_offset.size()
+        # using Conv3d
+        # x_offset = x_offset.permute(0,1,4,2,3), then Conv3d(c,c_out, kernel_size =(num_param,1,1),stride=(num_param,1,1),bias= False)
+        # using 1 × 1 Conv
+        # x_offset = x_offset.permute(0,1,4,2,3), then, x_offset.view(b,c×num_param,h,w)  finally, Conv2d(c×num_param,c_out, kernel_size =1,stride=1,bias= False)
+        # using the column conv as follow， then, Conv2d(inc, outc, kernel_size=(num_param, 1), stride=(num_param, 1), bias=bias)
+        
         x_offset = rearrange(x_offset, 'b c h w n -> b c (h n) w')
         return x_offset
