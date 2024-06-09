@@ -1,5 +1,5 @@
 
-# AKConv: Convolutional Kernel with Arbitrary Sampled Shapes and Arbitrary Number of Parameters ([preprint](https://arxiv.org/abs/2311.11587))
+# LDConv: Linear Deformable Convoluton for Improving Convolutioanl Neural Networks ([preprint](https://arxiv.org/abs/2311.11587))
 This repository is a PyTorch implementation of our paper: AKConv: Convolutional Kernel with Arbitrary Sampled Shapes and Arbitrary Number of Parameters.
 # If you are interested in our other work, you can find information on https://github.com/Liuchen1997/RFAConv.
 
@@ -29,7 +29,7 @@ The code has been opened, thank you for your support.
 
 # Object detection based on VOC 7+12 and YOLOv7
 
-| Models      | AKConv | Precision | Recall | mAP50 | mAP  | FLOPS | Params |
+| Models      | LDConv | Precision | Recall | mAP50 | mAP  | FLOPS | Params |
 |-------------|--------|-----------|--------|-------|------|-------|--------|
 | YOLOv7-tiny (Baseline)         | -      | 77.3      | 69.8   | 76.4  | 50.2 | 13.2  | 6.06   |
 |             | 3      | 80.1      | 68.4   | 76.1  | 50.3 | 12.1  | 5.56   |
@@ -40,7 +40,7 @@ The code has been opened, thank you for your support.
 |             | 9      | 81        | 69.3   | 76.7  | 51.3 | 13.7  | 6.14   |
 # Object detection based on VisDrone-DET2021 and YOLOv5
 
-| Models  | AKConv | Precision | Recall | mAP50 | mAP  | FLOPS | Params (M) |
+| Models  | LDConv | Precision | Recall | mAP50 | mAP  | FLOPS | Params (M) |
 |---------|--------|-----------|--------|-------|------|-------|------------|
 | YOLOv5n (Baseline) | -      | 38.5      | 28     | 26.4  | 13.4 | 4.2   | 1.77       |
 |         | 3      | 37.9      | 27.4   | 25.9  | 13.2 | 3.5   | 1.41       |
@@ -57,21 +57,21 @@ The code has been opened, thank you for your support.
 |-------------------------------|------|------|------|------|------|------|--------|------------|
 | YOLOv5s                       | 54.8 | 37.5 | 35   | 19.2 | 40   | 45.2 | 16.4   | 7.23       |
 | YOLOv5s (DSConv =5)           | 43.2 | 23.5 | 23.9 | 13.0 | 27.6 | 30.5 | 14.8   | 6.45       |
-| YOLOv5s (AKConv=5)            | 56.6 | 40.7 | 38   | 20.8 | 41.8 | 52   | 14.8   | 6.54       |
-| YOLOv5s (AKConv=9)            | 57.8 | 41.4 | 38.7 | 20.8 | 42.8 | 52.3 | 17.1   | 7.37       |
-| YOLOv5s (AKConv=9, padding)   | 58.3 | 41.9 | 39.2 | 21.6 | 43.2 | 53.5 | 17.1   | 7.37       |
+| YOLOv5s (LDConv=5)            | 56.6 | 40.7 | 38   | 20.8 | 41.8 | 52   | 14.8   | 6.54       |
+| YOLOv5s (LDConv=9)            | 57.8 | 41.4 | 38.7 | 20.8 | 42.8 | 52.3 | 17.1   | 7.37       |
+| YOLOv5s (LDConv=9, padding)   | 58.3 | 41.9 | 39.2 | 21.6 | 43.2 | 53.5 | 17.1   | 7.37       |
 | YOLOv5s (Deformable Conv = 3) | 58.5 | 41.8 | 39.1 | 20.8 | 43.4 | 53.6 | 17.1   | 7.37       |
-| YOLOv5s (AKConv=11)           | 58.5 | 42.1 | 39.3 | 21.9 | 43.3 | 53.8 | 18.3   | 7.91       |
-| YOLOv5s (AKConv=11, padding)  | 58.6 | 42.1 | 39.5 | 21.3 | 43.7 | 53.2 | 18.3   | 7.91       |
+| YOLOv5s (LDConv=11)           | 58.5 | 42.1 | 39.3 | 21.9 | 43.3 | 53.8 | 18.3   | 7.91       |
+| YOLOv5s (LDConv=11, padding)  | 58.6 | 42.1 | 39.5 | 21.3 | 43.7 | 53.2 | 18.3   | 7.91       |
 
 # Comparison experiments
 | Models             | Precision | Recall | mAP50 | mAP  | GFLOPS | Params (M) |
 |--------------------|-----------|--------|-------|------|--------|------------|
 | YOLOv5n            | 73.8      | 62.2   | 68.1  | 41.5 | 4.2    | 1.77       |
 | YOLOv5n (DSConv=4) | 63        | 50.4   | 54.2  | 26.1 | 3.7    | 1.55       |
-| YOLOv5n (AKConv=4) | 76.5      | 63.6   | 70.8  | 46.5 | 3.7    | 1.55       |
+| YOLOv5n (LDConv=4) | 76.5      | 63.6   | 70.8  | 46.5 | 3.7    | 1.55       |
 | YOLOv5n (DSConv=9) | 60.6      | 50.8   | 53.4  | 25.3 | 4.8    | 1.9        |
-| YOLOv5n (AKConv=9) | 76.7      | 65.2   | 71.8  | 48.4 | 4.8    | 1.9        |
+| YOLOv5n (LDConv=9) | 76.7      | 65.2   | 71.8  | 48.4 | 4.8    | 1.9        |
 
 
 
