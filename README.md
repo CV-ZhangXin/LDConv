@@ -14,7 +14,7 @@ The code has been opened, thank you for your support.
 
 
 # Object detection based on COCO2017 and YOLOv5
-| Models    | AKConv | AP50 | AP75 | AP   | APS  | APM  | APL  | GFLOPS | Params (M) |
+| Models    | LDConv | AP50 | AP75 | AP   | APS  | APM  | APL  | GFLOPS | Params (M) |
 |-----------|--------|------|------|------|------|------|------|--------|------------|
 |   YOLOv5n (Baseline) | -      | 45.6 | 28.9 | 27.5 | 13.5 | 31.5 | 35.9 | 4.5    | 1.87       |
 |           | 3      | 47.8 | 31   | 29.8 | 14.5 | 33.2 | 41   | 3.8    | 1.51       |
