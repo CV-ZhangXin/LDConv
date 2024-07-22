@@ -1,13 +1,13 @@
 
-# LDConv: Linear Deformable Convoluton for Improving Convolutioanl Neural Networks ([preprint](https://arxiv.org/abs/2311.11587))
-This repository is a PyTorch implementation of our paper: AKConv: Convolutional Kernel with Arbitrary Sampled Shapes and Arbitrary Number of Parameters.
+# LDConv: Linear deformable convoluton for improving convolutioanl neural networks ([IVC](https://www.sciencedirect.com/science/article/abs/pii/S0262885624002956))
+This repository is a PyTorch implementation of our paper: LDConv: Convolutional Kernel with Arbitrary Sampled Shapes and Arbitrary Number of Parameters.
 # If you are interested in our other work, you can find information on https://github.com/Liuchen1997/RFAConv.
 
 The relevant interpolation codes and resampling codes are referenced at https://github.com/dontLoveBugs/Deformable_ConvNet_pytorch.
 
 The code has been opened, thank you for your support.
 
-# AKConv provides kernels of different sizes for efficient extraction of features.
+# LDConv provides kernels of different sizes for efficient extraction of features.
 ![Kernels-samples](https://github.com/CV-ZhangXin/AKConv/assets/54203800/0fa57db7-6747-4887-8adc-62358861773b)
 
 
@@ -107,12 +107,12 @@ The code has been opened, thank you for your support.
   year={2017}
 }
 
-@misc{zhang2023akconv,
-      title={AKConv: Convolutional Kernel with Arbitrary Sampled Shapes and Arbitrary Number of Parameters}, 
-      author={Xin Zhang and Yingze Song and Tingting Song and Degang Yang and Yichen Ye and Jie Zhou and Liming Zhang},
-      year={2023},
-      eprint={2311.11587},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{zhang2024ldconv,
+  title={LDConv: Linear deformable convolution for improving convolutional neural networks},
+  author={Zhang, Xin and Song, Yingze and Song, Tingting and Yang, Degang and Ye, Yichen and Zhou, Jie and Zhang, Liming},
+  journal={Image and Vision Computing},
+  pages={105190},
+  year={2024},
+  publisher={Elsevier}
 }
 
