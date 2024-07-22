@@ -1,6 +1,6 @@
-class AKConv(nn.Module):
+class LDConv(nn.Module):
     def __init__(self, inc, outc, num_param, stride=1, bias=None):
-        super(AKConv, self).__init__()
+        super(LDConv, self).__init__()
         self.num_param = num_param
         self.stride = stride
         self.conv = nn.Sequential(nn.Conv2d(inc, outc, kernel_size=(num_param, 1), stride=(num_param, 1), bias=bias),nn.BatchNorm2d(outc),nn.SiLU())  # the conv adds the BN and SiLU to compare original Conv in YOLOv5.
@@ -59,7 +59,7 @@ class AKConv(nn.Module):
 
         return out
 
-    # generating the inital sampled shapes for the AKConv with different sizes.
+    # generating the inital sampled shapes for the LDConv with different sizes.
     def _get_p_n(self, N, dtype):
         base_int = round(math.sqrt(self.num_param))
         row_number = self.num_param // base_int
