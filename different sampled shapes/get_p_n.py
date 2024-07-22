@@ -1,5 +1,5 @@
 # the different initial sampled shapes (a) (b) (c) (d) (e)
-# we have explored the size 5 AKConv.
+# we have explored the size 5 LDConv.
 def _get_p_n1(self, N, dtype):
         p_n_x = torch.tensor([0, 0, 1, 2, 2])
         p_n_y = torch.tensor([0, 2, 1, 0, 2])
