@@ -19,7 +19,7 @@ backbone:
    [-1, 1, Conv, [32, 1, 1, None, 1, nn.LeakyReLU(0.1)]],
    [-2, 1, Conv, [32, 1, 1, None, 1, nn.LeakyReLU(0.1)]],
    [-1, 1, Conv, [32, 3, 1, None, 1, nn.LeakyReLU(0.1)]],
-   [-1, 1, AKConv, [32, 3, 1]],
+   [-1, 1, LDConv, [32, 3, 1]],
    [[-1, -2, -3, -4], 1, Concat, [1]],
    [-1, 1, Conv, [64, 1, 1, None, 1, nn.LeakyReLU(0.1)]],  # 7
 
@@ -27,7 +27,7 @@ backbone:
    [-1, 1, Conv, [64, 1, 1, None, 1, nn.LeakyReLU(0.1)]],
    [-2, 1, Conv, [64, 1, 1, None, 1, nn.LeakyReLU(0.1)]],
    [-1, 1, Conv, [64, 3, 1, None, 1, nn.LeakyReLU(0.1)]],
-   [-1, 1, AKConv, [64, 3, 1]],
+   [-1, 1, LDConv, [64, 3, 1]],
    [[-1, -2, -3, -4], 1, Concat, [1]],
    [-1, 1, Conv, [128, 1, 1, None, 1, nn.LeakyReLU(0.1)]],  # 14
 
@@ -35,7 +35,7 @@ backbone:
    [-1, 1, Conv, [128, 1, 1, None, 1, nn.LeakyReLU(0.1)]],
    [-2, 1, Conv, [128, 1, 1, None, 1, nn.LeakyReLU(0.1)]],
    [-1, 1, Conv, [128, 3, 1, None, 1, nn.LeakyReLU(0.1)]],
-   [-1, 1, AKConv, [128, 3, 1]],
+   [-1, 1, LDConv, [128, 3, 1]],
    [[-1, -2, -3, -4], 1, Concat, [1]],
    [-1, 1, Conv, [256, 1, 1, None, 1, nn.LeakyReLU(0.1)]],  # 21
 
@@ -43,7 +43,7 @@ backbone:
    [-1, 1, Conv, [256, 1, 1, None, 1, nn.LeakyReLU(0.1)]],
    [-2, 1, Conv, [256, 1, 1, None, 1, nn.LeakyReLU(0.1)]],
    [-1, 1, Conv, [256, 3, 1, None, 1, nn.LeakyReLU(0.1)]],
-   [-1, 1, AKConv, [256, 3, 1]],
+   [-1, 1, LDConv, [256, 3, 1]],
    [[-1, -2, -3, -4], 1, Concat, [1]],
    [-1, 1, Conv, [512, 1, 1, None, 1, nn.LeakyReLU(0.1)]],  # 28
   ]
