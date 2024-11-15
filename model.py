@@ -7,6 +7,7 @@ class LDConv(nn.Module):
         self.p_conv = nn.Conv2d(inc, 2 * num_param, kernel_size=3, padding=1, stride=stride)
         nn.init.constant_(self.p_conv.weight, 0)
         self.p_conv.register_full_backward_hook(self._set_lr)
+        self.register_buffer("p_n", self._get_p_n(N=self.num_param))
 
     @staticmethod
     def _set_lr(module, grad_input, grad_output):
@@ -60,7 +61,7 @@ class LDConv(nn.Module):
         return out
 
     # generating the inital sampled shapes for the LDConv with different sizes.
-    def _get_p_n(self, N, dtype):
+    def _get_p_n(self, N):
         base_int = round(math.sqrt(self.num_param))
         row_number = self.num_param // base_int
         mod_number = self.num_param % base_int
@@ -78,7 +79,7 @@ class LDConv(nn.Module):
             mod_p_n_y = torch.flatten(mod_p_n_y)
             p_n_x,p_n_y  = torch.cat((p_n_x,mod_p_n_x)),torch.cat((p_n_y,mod_p_n_y))
         p_n = torch.cat([p_n_x,p_n_y], 0)
-        p_n = p_n.view(1, 2 * N, 1, 1).type(dtype)
+        p_n = p_n.view(1, 2 * N, 1, 1)
         return p_n
 
     # no zero-padding
@@ -97,10 +98,10 @@ class LDConv(nn.Module):
         N, h, w = offset.size(1) // 2, offset.size(2), offset.size(3)
 
         # (1, 2N, 1, 1)
-        p_n = self._get_p_n(N, dtype)
+        # p_n = self._get_p_n(N, dtype)
         # (1, 2N, h, w)
         p_0 = self._get_p_0(h, w, N, dtype)
-        p = p_0 + p_n + offset
+        p = p_0 + self.p_n + offset
         return p
 
     def _get_x_q(self, x, q, N):
