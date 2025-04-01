@@ -98,10 +98,10 @@ class LDConv(nn.Module):
         N, h, w = offset.size(1) // 2, offset.size(2), offset.size(3)
 
         # (1, 2N, 1, 1)
-        p_n = self._get_p_n(N, dtype)
+        # p_n = self._get_p_n(N, dtype)
         # (1, 2N, h, w)
         p_0 = self._get_p_0(h, w, N, dtype)
-        p = p_0 + p_n + offset
+        p = p_0 + self.p_n + offset
         return p
 
     def _get_x_q(self, x, q, N):
