@@ -1,5 +1,5 @@
 
-# LDConv: Linear deformable convoluton for improving convolutioanl neural networks ([Image and Vision Computing](https://www.sciencedirect.com/science/article/abs/pii/S0262885624002956))
+# LDConv: Linear deformable convolution for improving convolutioanl neural networks ([Image and Vision Computing](https://www.sciencedirect.com/science/article/abs/pii/S0262885624002956))
 This repository is a PyTorch implementation of our paper: LDConv: Linear deformable convoluton for improving convolutioanl neural networks.
 # If you are interested in our other work, you can find information on https://github.com/Liuchen1997/RFAConv.
 
